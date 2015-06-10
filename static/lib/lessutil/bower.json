@@ -1,0 +1,14 @@
+{
+    "name": "lessutil",
+    "version": "0.1.0",
+    "homepage": "https://github.com/typecode/lessutil.git",
+    "authors": [
+        "Ian Lord <ian@typecode.com>",
+        "Lev Kanter <levkanter@gmail.com>"
+    ],
+    "description": "Reset and mixins for LESS",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+    }
+}

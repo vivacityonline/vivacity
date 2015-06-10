@@ -1,0 +1,20 @@
+{
+  "name": "lessutil",
+  "homepage": "https://github.com/typecode/lessutil.git",
+  "authors": [
+    "Ian Lord <ian@typecode.com>",
+    "Lev Kanter <levkanter@gmail.com>"
+  ],
+  "description": "Reset and mixins for LESS",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {},
+  "_release": "9faf417112",
+  "_resolution": {
+    "type": "commit",
+    "commit": "9faf41711232e93c10118b49d5beea15fe8619b6"
+  },
+  "_source": "git@github.com:typecode/lessutil.git",
+  "_target": "9faf41711232e93c10118b49d5beea15fe8619b6",
+  "_originalSource": "git@github.com:typecode/lessutil.git"
+}

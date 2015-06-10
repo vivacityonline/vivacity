@@ -1,0 +1,40 @@
+@global_fontsize: 18px;
+@global_lineheight: 1.3;
+
+body {
+    .sans-regular();
+    background-color: @color_white;
+    color: @color_primary_dark;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-size: @global_fontsize;
+    line-height: @global_lineheight;
+}
+
+a {
+    color: inherit;
+}
+
+svg {
+    display: block;
+}
+
+.section {
+    padding: 125px @gutter;
+
+    @media @phone {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+}
+
+.selection-styles() {
+    background: @color_yellow;
+    color: @color_white;
+}
+::selection {
+	.selection-styles();
+}
+::-moz-selection {
+	.selection-styles();
+}

@@ -1,0 +1,387 @@
+@logo_origwidth:  580px;
+@logo_origheight: 242px;
+@logo_ratio:      @logo_origwidth / @logo_origheight;
+.logo {
+    display: block;
+    width:  @logo_origwidth;
+    height: @logo_origheight;
+
+    @media @phone {
+        width: 200px;
+        height: 200px * 1/@logo_ratio;
+    }
+
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    h1 {
+        display: none;
+    }
+}
+
+.hero {
+    @_slant_height: 30vh;
+    @_slant_height_phone: 15vh;
+
+    @_slant_height_novhunit: 75px;
+    @_hero_height_novhunit: 550px;
+
+    min-height: 100vh + @_slant_height;
+    .full-bg(bottom right, cover);
+    position: relative;
+    
+    @media @phone {
+        min-height: 100vh + @_slant_height_phone;
+    }
+
+    html.no-cssvhunit & {
+        min-height: @_hero_height_novhunit + @_slant_height_novhunit;
+    }
+
+    .hero-content {
+        height: 100vh;
+        min-height: 600px;
+
+        html.no-cssvhunit & {
+            height: @_hero_height_novhunit;
+        }
+
+        .hero-content-membrane {
+            position: relative;
+            z-index: 3;
+            .y-centered();
+        }
+    }
+
+    .logo {
+        margin: 0 auto 0;
+        padding-top: 5vh;
+
+        html.no-cssvhunit & {
+            padding-top: 40px;
+        }
+
+        svg {
+            path {
+                fill: @color_primary_xlight;
+            }
+        }
+    }
+
+    .tagline {
+        display: block;
+        margin: 1em @gutter 2em;
+        font-size: 26px;
+        line-height: 1.2;
+        .sans-regular();
+        font-style: italic;
+        color: @color_primary_med;
+        text-align: center;
+
+        @media @phone {
+            font-size: 18px;
+        }
+    }
+
+    .signup {
+        display: block;
+        margin: 16px @gutter;
+        text-align: center;
+
+        input.signup-name {
+            width: 35%;
+            max-width: 300px;
+        }
+        input.signup-email {
+            width: 25%;
+            max-width: 300px;
+        }
+        input.signup-zip {
+            width: 10%;
+            max-width: 100px;
+        }
+
+        .signup-error {
+            display: block;
+            margin: 12px 0 0 0;
+            color: @color_accent;
+            .sans-bold();
+            font-size: 16px;
+            line-height: 1.2;
+            .transition(opacity, 200ms);
+
+            &.state-hidden {
+                opacity: 0;
+            }
+        }
+
+        @media @phone {
+            input.signup-name,
+            input.signup-email,
+            input.signup-zip {
+                width: 100%;
+                max-width: 100%;
+                margin: 0 auto 10px;
+            }
+            input.signup-submit {
+                margin: 0 auto 0;
+            }
+        }
+
+        .pre-submit-form,
+        .post-submit-msg {
+            min-height: 95px;
+        }
+        .post-submit-msg {
+            .sans-bold();
+            font-size: 22px;
+            line-height: 1.2;
+            color: @color_primary_light;
+            position: relative;
+            > span {
+               position: relative;
+               top: 8px;
+            }
+        }
+    }
+
+    .slant {
+        position: absolute;
+        z-index: 1;
+        bottom: -1px; left: -2vw; right: 0;
+        height: @_slant_height;
+        overflow: hidden;
+
+        @media @phone {
+            height: @_slant_height_phone;
+        }
+
+        html.no-cssvhunit & {
+            height: @_slant_height_novhunit;
+        }
+
+        svg {
+            height: 100%;
+            width: 100%;
+            
+            polygon {
+                fill: @color_primary_xlight;
+            }
+        }
+    }
+
+    .line {
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        width: 1px;
+
+        &.top {
+            height: @_slant_height/2 + 5;
+            bottom: @_slant_height/2;
+            border-left: 1px dashed @color_primary_light;
+            opacity: 0.75;
+
+            @media @phone {
+                height: @_slant_height_phone/2 + 5;
+                bottom: @_slant_height_phone/2;
+            }
+
+            html.no-cssvhunit & {
+                height: @_slant_height_novhunit/2 + 20px;
+                bottom: @_slant_height_novhunit/2;
+            }
+        }
+        &.bottom {
+            height: @_slant_height/2;
+            bottom: 0;
+            border-left: 1px dashed @color_primary_dark;
+            opacity: 0.25;
+
+            @media @phone {
+                height: @_slant_height_phone/2;
+            }
+
+            html.no-cssvhunit & {
+                height: @_slant_height_novhunit/2;
+            }
+        }
+    }
+
+}
+
+
+
+.section.about {
+    @_about_background_color: @color_primary_xlight;
+    background: @_about_background_color;
+    position: relative;
+    z-index: 1;
+    padding-top: 0;
+
+    .line {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 50%;
+        bottom: -1 * @section_howitworks_top_pad/2;
+        width: 1px;
+        border-left: 1px dashed @color_primary_dark;
+        opacity: 0.25;
+    }
+
+    ul {
+        display: block;
+        position: relative;
+        z-index: 3;
+
+        li {
+            display: block;
+            max-width: 500px;
+            padding: 100px 0;
+            margin: 0 auto 0;
+            text-align: center;
+            background: -moz-linear-gradient(top, fadeout(@_about_background_color, 90%) 0%, fadeout(@_about_background_color, 0%) 20%, fadeout(@_about_background_color, 0%) 80%, fadeout(@_about_background_color, 90%) 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,fadeout(@_about_background_color, 90%)), color-stop(20%,fadeout(@_about_background_color, 0%)), color-stop(80%,fadeout(@_about_background_color, 0%)), color-stop(100%,fadeout(@_about_background_color, 90%)));
+            background: -webkit-linear-gradient(top,  fadeout(@_about_background_color, 90%) 0%,fadeout(@_about_background_color, 0%) 20%,fadeout(@_about_background_color, 0%) 80%,fadeout(@_about_background_color, 90%) 100%);
+            background: -o-linear-gradient(top,  fadeout(@_about_background_color, 90%) 0%,fadeout(@_about_background_color, 0%) 20%,fadeout(@_about_background_color, 0%) 80%,fadeout(@_about_background_color, 90%) 100%);
+            background: -ms-linear-gradient(top,  fadeout(@_about_background_color, 90%) 0%,fadeout(@_about_background_color, 0%) 20%,fadeout(@_about_background_color, 0%) 80%,fadeout(@_about_background_color, 90%) 100%);
+            background: linear-gradient(to bottom,  fadeout(@_about_background_color, 90%) 0%,fadeout(@_about_background_color, 0%) 20%,fadeout(@_about_background_color, 0%) 80%,fadeout(@_about_background_color, 90%) 100%);
+
+            @media @phone {
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+
+
+            .thumb {
+                @_size: 350px;
+                @_size_phone: 200px;
+
+                width: @_size;
+                height: @_size;
+                border-radius: @_size/2;
+                background: @color_primary_light;
+                margin: 0 auto 40px;
+                .full-bg(center center, cover);
+
+                @media @phone {
+                    width: @_size_phone;
+                    height: @_size_phone;
+                    border-radius: @_size_phone/2;
+                }
+            }
+
+            h3 {
+                margin-bottom: 0.5em;
+                color: @color_accent;
+            }
+            p {
+                font-size: 22px;
+                line-height: 1.4;
+
+                @media @phone {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+
+@section_howitworks_top_pad: 150px;
+.section.howitworks {
+    
+    padding-top: @section_howitworks_top_pad;
+    background: @color_white;
+    .clearfix();
+    position: relative;
+
+    .line {
+        position: absolute;
+        z-index: 2;        
+        opacity: 0.25;
+
+        @media @phone {
+            display: none;
+        }
+
+        &.horizontal {
+            top: @section_howitworks_top_pad/2;
+            right: 50%;
+            left: 33%/2 + 1.5%;
+            height: 1px;
+            border-bottom: 1px dashed @color_primary_dark;
+        }
+        &.vertical {
+            top: @section_howitworks_top_pad/2 + 1;
+            left: 33%/2 + 1.5%;
+            height: @section_howitworks_top_pad/2;
+            width: 1px;
+            border-left: 1px dashed @color_primary_dark;
+        }
+    }
+
+    ul {
+        li {
+            .border-box();
+            display: block;
+            float: left;
+            width: 33%;
+            padding: 20px 3%;
+
+            @media @phone {
+                float: none;
+                width: auto;
+                padding-bottom: 40px;
+            }
+
+            svg {
+                display: block;
+                width: 175px;
+                height: 175px;
+                margin: 0 auto 0;
+
+                @media @phone {
+                    width: 125px;
+                    height: 125px;
+                }
+            }
+            &:nth-child(1) svg {
+                path {
+                    fill: @color_yellow;
+                }
+            }
+            &:nth-child(2) svg {
+                path {
+                    fill: @color_yellowgreen;
+                }
+            }
+            &:nth-child(3) svg {
+                path {
+                    fill: @color_green;
+                }
+            }
+
+            p {
+                margin: 1em auto 0;
+                max-width: 300px;
+                font-size: 18px;
+                line-height: 1.3;
+                text-align: center;
+
+                a {
+                    text-decoration: underline;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: @color_accent;
+                    }
+                }
+            }
+        }
+    }
+}

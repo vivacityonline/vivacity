@@ -1,0 +1,112 @@
+@header_zindex: 9999;
+@header_transitionspeed: 400ms;
+.header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    padding: 0 @gutter;
+    z-index: @header_zindex;
+    .transition(background, @header_transitionspeed);
+
+    &.state-sticky {
+        background: fadeout(@color_primary_xlight, 5%);
+    }
+
+    ul {
+        display: block;
+        font-size: 0;
+        line-height: 0;
+        text-align: center;
+
+        @media @phone {
+            display: none;
+        }
+
+        li {
+            font-size: 14px;
+            line-height: 1;
+            .sans-black-caps();
+            padding: 24px 20px;
+            display: inline-block;
+            .transition(padding, @header_transitionspeed);
+
+            .state-sticky& {
+                padding-top:    8px;
+                padding-bottom: 8px;
+            }
+
+            &.smalllogo {
+                @_smalllogo_height: 30px;
+                position: absolute;
+                left: @gutter;
+                top: 10px;
+                padding: 0;
+                height: @_smalllogo_height;
+                overflow: hidden;
+                opacity: 0;
+                .transform(scale(0,0));
+                .transition(all, @header_transitionspeed, 0, cubic-bezier(0.175, 0.885, 0.32, 1.275));
+
+                .state-sticky& {
+                    cursor: pointer;
+                    opacity: 1;
+                    .transform(scale(1,1));
+                }
+
+                svg {
+                    display: block;
+                    width:  @_smalllogo_height * @logo_ratio;
+                    height: @_smalllogo_height;
+                    opacity: 0.5;
+
+                    path {
+                        fill: @color_primary_dark;
+                    }
+                }
+
+                &:hover svg {
+                    opacity: 1;
+
+                    path {
+                        fill: @color_accent;
+                    }
+                }
+            }
+
+            a {
+                display: block;
+                cursor: pointer;
+                padding: 0.75em 1em;
+                border: 2px solid transparent;
+                color: @color_primary_light;
+                .transition(color border-color, @header_transitionspeed);
+
+                .state-sticky& {
+                    color: @color_primary_med;
+                }
+
+                &:hover {
+                    color: @color_accent;
+                }
+            }
+            a.button {
+                color: @color_yellow;
+                border-color: @color_yellow;
+
+                &:hover {
+                    color: @color_accent;
+                    border-color: @color_accent;
+                }
+
+                .state-sticky& {
+                    color: @color_accent;
+                    border-color: @color_accent;
+
+                    &:hover {
+                        color: @color_accent_dark;
+                        border-color: @color_accent_dark;
+                    }
+                }
+            }
+        }
+    }
+}

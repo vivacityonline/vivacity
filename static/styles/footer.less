@@ -1,0 +1,43 @@
+.footer {
+    border-top: 1px solid @color_primary_xlight;
+    display: block;
+    margin: 0 @gutter;
+    padding: 75px (100%/@grid_column_count);
+
+    font-size: 16px;
+    line-height: 1;
+    color: @color_accent;
+
+    a {
+        cursor: pointer;
+        color: @color_accent;
+        margin-right: 2em;
+
+        @media @phone {
+            margin-right: 1em;
+        }
+
+        &:hover {
+            color: @color_primary_dark;
+        }
+    }
+
+    .footer-socials {
+        float: right; 
+
+        /*@media @phone {
+            float: none;
+            margin-bottom: 1em;
+        }*/
+
+        a {
+            margin-left: 1em;
+            margin-right: 0;
+
+            @media @phone {
+                margin-left: 0;
+                margin-right: 1em;
+            }
+        }
+    }
+}

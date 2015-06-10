@@ -1,0 +1,59 @@
+//@import '../fonts/ss-standard/ss-standard.css';
+@import '../fonts/ss-social-regular/ss-social-regular.css';
+
+.sans() {
+    font-family: 'brandon-grotesque', Helvetica, Arial, sans-serif;
+}
+.sans-regular() {
+    .sans();
+    font-weight: 400;
+}
+.sans-medium() {
+    .sans();
+    font-weight: 500;
+}
+.sans-bold() {
+    .sans();
+    font-weight: 700;
+}
+.sans-black() {
+    .sans();
+    font-weight: 900;
+}
+
+.sans-black-caps() {
+    .sans-black();
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+}
+
+strong {
+    font-weight: 700;
+}
+
+
+h1, h2, h3, h4, h5 {
+    font-size: 20px;
+    line-height: 1.1;
+    .sans-black();
+    color: @color_black;
+    letter-spacing: -0.015em;
+
+    &.hidden {
+        display: none;
+    }
+}
+
+h1 {
+    font-size: 68px;
+    line-height: 1;
+}
+h2, 
+h3 {
+    font-size: 42px;
+    line-height: 1.05;
+
+    @media @phone {
+        font-size: 28px;
+    }
+}

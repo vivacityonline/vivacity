@@ -1,0 +1,60 @@
+
+/*
+ * Media queries
+ */
+
+@full:     ~'screen and (min-width: 1016px)';
+@tablet:   ~'screen and (max-width: 1015px) and (min-width: 768px)';
+@phone:    ~'screen and (max-width: 767px)';
+
+@mega:     ~'screen and (min-width: 1500px)';
+
+@mobile:   ~'screen and (max-width: 1015px)'; // includes tablet and phone
+@notphone: ~'screen and (min-width: 768px)'; // includes full and tablet
+
+/*
+ * Grid
+ */
+
+@grid_column_count: 12;
+@grid_column_width: 100vw / @grid_column_count;
+
+@grid_quarter_width: 100vw / 4;
+@grid_third_width: 100vw / 3;
+@grid_half_width: 100vw / 2;
+@grid_full_width: 100vw;
+
+@gutter: 30px;
+
+/*
+ * Helpers
+ */
+
+.avoid-col-break() {
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    -o-column-break-inside: avoid;
+    -ms-column-break-inside: avoid;
+    column-break-inside: avoid;
+    display: inline-block;
+    width: 100%;
+}
+
+.y-centered() {
+    .transform(translateY(-50%));
+    position: relative;
+    // this element's parent should be positioned
+    top: 50%;
+}
+
+.xy-centered() {
+    .transform(translateX(-50%) translateY(-50%));
+    position: relative;
+    // this element's parent should be positioned
+    top: 50%;
+    left: 50%;
+}
+
+/*
+ * Global
+ */

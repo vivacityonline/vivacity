@@ -1,0 +1,18 @@
+<!-- apply in css as such: filter: url(/static/images/filters/colorize.svg#cyan) -->
+<!-- preview color matrices: http://apike.ca/prog_svg_filter_feColorMatrix.html -->
+
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg'>
+	
+	<filter id='yellow'>
+		<feColorMatrix type='matrix' values='1 1 1 0 0, 0.94 0.94 0.94 0 0, 0 0 0 0 0, 0 0 0 1 0' />
+	</filter>
+
+	<filter id='cyan'>
+		<feColorMatrix type='matrix' values='0 0 0 0 0, 0.67 0.67 0.67 0 0, 0.93 0.93 0.93 0 0, 0 0 0 1 0' />
+	</filter>
+
+	<filter id='magenta'>
+		<feColorMatrix type='matrix' values='0.92 0.92 0.92 0 0, 0 0 0 0 0, 0.55 0.55 0.55 0 0, 0 0 0 1 0' />
+	</filter>
+
+</svg>

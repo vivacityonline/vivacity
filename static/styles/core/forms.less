@@ -1,0 +1,40 @@
+input {
+    .border-box();
+    display: inline-block;
+    font-size: 20px;
+    //line-height: 1;
+    padding: 0.7em 0.5em;
+    .sans-bold();
+    color: @color_primary_light;
+    background: fadeout(@color_black, 90%);
+    border: 1px solid transparent;
+    border-bottom: 2px solid @color_primary_light;
+    outline: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    .transition(color border-color background-color, 200ms);
+
+    @media @phone {
+        display: block;
+    }
+
+    &.state-filled {
+        color: @color_yellow;
+        border-bottom-color: @color_yellow;
+        background: fadeout(@color_black, 80%);
+    }
+}
+input[type=submit] {
+    background: @color_yellow;
+    border-color: @color_yellow;
+    color: @color_primary_xdark;
+    .sans-black-caps();
+    padding-left:  1.5em;
+    padding-right: 1.5em;
+
+    &:hover {
+        cursor: pointer;
+        background-color: @color_primary_light;
+        border-color: @color_primary_light;
+    }
+}
