@@ -8,9 +8,18 @@
         <meta name='msapplication-tap-highlight' content='no'>
 
         <title>Vivacity</title>
-        <meta name='description' content='' />
 
-        <script src="//use.typekit.net/alr8opu.js"></script>
+        <meta name='description' content='Healthy delivery breakfast. Daily. Vivacity is tailored to your body type, dietary needs, and lifestyle.' />
+        <meta property='og:description' content='Healthy delivery breakfast. Daily. Vivacity is tailored to your body type, dietary needs, and lifestyle.' />
+        
+        <meta property='og:site_name' content='Vivacity'/>
+        <meta property='og:type' content='website'/>
+        <meta property='og:locale' content='en_US' />
+        <meta property='og:image' content='/static/images/ogicon.png' />
+
+        <meta name='keywords' content='vivacity, smoothies, smoothie, delivery, office, breakfast, healthy, meal, new york, nyc, new york city, manhattan, brooklyn' />
+
+        <script src='//use.typekit.net/alr8opu.js'></script>
         <script>try{Typekit.load();}catch(e){}</script>
 
         <link rel='shortcut icon' type='image/png' href='/static/images/favicon.png'>
