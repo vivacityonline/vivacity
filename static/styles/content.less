@@ -282,6 +282,7 @@
             p {
                 font-size: 22px;
                 line-height: 1.4;
+                margin-bottom: 0.5em;
 
                 @media @phone {
                     font-size: 18px;
@@ -326,6 +327,8 @@
     }
 
     ul {
+        .clearfix();
+
         li {
             .border-box();
             display: block;
@@ -383,5 +386,9 @@
                 }
             }
         }
+    }
+
+    .bigbutton-holder {
+        margin-top: 90px;
     }
 }

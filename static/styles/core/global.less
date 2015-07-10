@@ -38,3 +38,26 @@ svg {
 ::-moz-selection {
 	.selection-styles();
 }
+
+
+.bigbutton-holder {
+    .clearfix();
+    text-align: center;
+}
+.bigbutton {
+    font-size: 24px;
+    line-height: 1;
+    .sans-black-caps();
+    display: inline-block;
+    cursor: pointer;
+    padding: 0.75em 1em;
+    border: 2px solid @color_accent;
+    text-decoration: none;
+    color: @color_accent;
+    .transition(color border-color, @header_transitionspeed);
+
+    &:hover {
+        color: @color_accent_dark;
+        border-color: @color_accent_dark;
+    }
+}

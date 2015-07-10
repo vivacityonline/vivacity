@@ -14,7 +14,7 @@ include '_header.php';
                 <?php include 'static/images/svg-logo.html'; ?>
             </div>
 
-            <span class='tagline'>Healthy delivery breakfast. Daily.</span>
+            <span class='tagline'>Morning delivery nutrition blends. Daily.</span>
 
             <form id='signup' class='signup'>
                 <div id='stage-form' class='pre-submit-form'>
@@ -44,6 +44,8 @@ include '_header.php';
                 });
             </script>
 
+
+
         </div>
     </div>
 
@@ -61,27 +63,35 @@ include '_header.php';
 
 
 <div class='section about' id='about'>
+
+
+
+
     <h2 class='hidden'>About</h2>
 
     <span class='line'></span>
 
     <ul>
         <li>
+            <p>Vivacity is a customized subscription-based service that delivers nutrition blends created by Certified Nutritionists to you every morning.</p> 
+            <p><strong>Start your day productive, focused, and well nourished!</strong></p>
+        </li>
+        <li>
             <div class='thumb' style='background-image: url(/static/images/about-1.jpg)'></div>
-            <h3>Breakfast is essential.</h3>
-            <p>Regular habit of eating breakfast opposed to irregular consumption or skipping all together had beneficial influence on <strong>attention-concentration</strong> and <strong>memory</strong>.</p>
+            <h3>Breakfast is Essential</h3>
+            <p>A habit of regular consumption and breakfast has a positive influence on your <strong>attention, concentration</strong> and <strong>memory</strong>!</p>
         </li>
 
         <li>
             <div class='thumb' style='background-image: url(/static/images/about-2.jpg)'></div>
-            <h3>You are unique.</h3>
+            <h3>You are Unique</h3>
             <p>Everyone's body is different. People have various taste preferences and our bodies require specialized nutrients to support our particular lifestyle. <strong>Vivacity is tailored to your body type, dietary needs, and lifestyle.</strong></p>
         </li>
 
         <li>
             <div class='thumb' style='background-image: url(/static/images/about-3.jpg)'></div>
-            <h3>Health is wealth.</h3>
-            <p>Staying healthy can be <strong>convenient and cost effective</strong>. Fueling your body in the morning ensures you will be your best throughout the day.</p>
+            <h3>Health is Wealth</h3>
+            <p>Staying healthy can be <strong>convenient and cost effective</strong>. Fueling your body in the morning ensures you will be <strong>your best</strong> throughout the day.</p>
         </li>
     </ul>
 
@@ -100,7 +110,7 @@ include '_header.php';
                     <path d='M148.699,26.217v140.9c0,3.349-2.679,6.112-6.112,6.112H32.412c-3.433,0-6.112-2.763-6.112-6.112v-140.9 c0-3.349,2.679-6.112,6.112-6.112h24.446v-6.111c0-3.349,2.763-6.111,6.112-6.111h21.432V4.785c0-1.674,1.423-3.014,3.098-3.014 s3.098,1.34,3.098,3.014v3.098h21.432c3.349,0,6.112,2.762,6.112,6.111v6.111h24.446C146.02,20.105,148.699,22.868,148.699,26.217z  M142.588,26.217h-24.446v6.195c0,3.349-2.763,6.111-6.112,6.111H62.97c-3.349,0-6.112-2.762-6.112-6.111v-6.195H32.412v140.9H119.9 l22.688-22.687V26.217z M62.97,32.412h49.06V13.994H62.97V32.412z M142.588,153.052l-13.981,14.065h13.981V153.052z M80.01,82.25 H69.437c-1.101,0-1.982-0.991-1.982-2.093v-6.938c0-0.441,0.33-1.321,0.661-1.652l16.08-12.556h10.133 c1.101,0,1.982,0.991,1.982,2.093v70.71c0,1.101-0.881,2.092-1.982,2.092H82.103c-1.212,0-2.093-0.991-2.093-2.092V82.25z'/>
                 </svg>
             </div>
-            <p>Complete online Health Consultation Form that will be emailled to you after <a>signing up</a></p>
+            <p>Simply <a data-scrollto='#logo'>sign up</a>, complete our HealthID™ Form about daily activity, taste and body-specific requests</p>
         </li>
 
         <li>
@@ -109,7 +119,7 @@ include '_header.php';
                     <path d='M162.868,103.723l-29.821-37.981h-0.074c-0.445-0.593-1.187-1.039-2.077-1.039h-27.061 c-1.307,1.805-2.632,3.616-3.921,5.377h11.447c0.247,0,0.492,0.013,0.734,0.039h17.467l25.592,32.565h-43.248 c-1.484,0-2.671,1.187-2.671,2.745h-0.223c-1.335,10.682-10.46,18.99-21.513,18.99s-20.177-8.308-21.513-18.99h-0.223 c0-1.558-1.187-2.745-2.671-2.745H19.847l25.592-32.565h20.802c1.292-1.752,2.626-3.569,3.976-5.415H44.104 c-0.89,0-1.632,0.445-2.077,1.039h-0.074l-29.821,37.981c-0.371,0.519-0.593,1.039-0.593,1.706v56.971 c0,2.967,2.448,5.415,5.415,5.415h141.092c2.967,0,5.415-2.448,5.415-5.415v-56.971 C163.461,104.762,163.239,104.243,162.868,103.723z M158.046,162.401H16.954V108.1h43.989c2.522,12.388,13.427,21.735,26.557,21.735 s24.035-9.347,26.557-21.735h43.989V162.401z M60.74,85.833c7.007-9.182,24.887-33.465,32.015-44.338 c1.571-2.416,3.141-5.799,3.141-9.182c0-4.591-3.866-8.698-10.631-8.698c-4.953,0-9.423,3.503-11.719,6.041 c-0.966,0.966-2.416,0.966-3.383,0l-7.37-7.491c-0.846-0.724-0.966-2.175-0.121-3.141c0,0,9.786-11.84,24.162-11.84 c17.276,0,27.424,10.994,27.424,24.404c0,6.404-1.812,10.028-4.712,15.706c-3.866,6.886-13.772,19.813-19.451,27.787h21.263 c1.208,0,2.295,1.087,2.295,2.295V88.25c0,1.208-1.087,2.295-2.295,2.295H63.036c-1.329,0-2.295-1.087-2.295-2.295V85.833z'/>
                 </svg>
             </div>
-            <p>Certified Health Coach Elise Flanagan reviews health history and creates menu for your approval</p>
+            <p>A custom menu for each day of the week is created by a Certified Nutritionist to support your unique lifestyle</p>
         </li>
 
         <li>
@@ -121,6 +131,10 @@ include '_header.php';
             <p>We deliver to your office fresh daily</p>
         </li>
     </ul>
+
+    <div class='bigbutton-holder'>
+        <a data-scrollto='#logo' class='bigbutton'>Sign Up Today!</a>
+    </div>
 
 </div>
 
@@ -136,5 +150,16 @@ include '_header.php';
     });
 </script>
 -->
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-64449293-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
 
 <?php include '_footer.php'; ?>

@@ -334,6 +334,63 @@ svg {
   background: #ffe14f;
   color: #ffffff;
 }
+.bigbutton-holder {
+  text-align: center;
+}
+.bigbutton-holder:before,
+.bigbutton-holder:after {
+  content: '';
+  display: table;
+}
+.bigbutton-holder:after {
+  clear: both;
+}
+.bigbutton-holder:before,
+.bigbutton-holder:after {
+  content: '';
+  display: table;
+}
+.bigbutton-holder:after {
+  clear: both;
+}
+.bigbutton {
+  font-size: 24px;
+  line-height: 1;
+  font-family: 'brandon-grotesque', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.75em 1em;
+  border: 2px solid #d62e33;
+  text-decoration: none;
+  color: #d62e33;
+  -webkit-transition-property: color border-color;
+  -webkit-transition-duration: 400ms;
+  -webkit-transition-delay: 0ms;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-property: color border-color;
+  -moz-transition-duration: 400ms;
+  -moz-transition-delay: 0ms;
+  -moz-transition-timing-function: ease-in-out;
+  -ms-transition-property: color border-color;
+  -ms-transition-duration: 400ms;
+  -ms-transition-delay: 0ms;
+  -ms-transition-timing-function: ease-in-out;
+  -o-transition-property: color border-color;
+  -o-transition-duration: 400ms;
+  -o-transition-delay: 0ms;
+  -o-transition-timing-function: ease-in-out;
+  transition-property: color border-color;
+  transition-duration: 400ms;
+  transition-delay: 0ms;
+  transition-timing-function: ease-in-out;
+}
+.bigbutton:hover {
+  color: #991e22;
+  border-color: #991e22;
+}
 .header {
   position: fixed;
   top: 0;
@@ -523,13 +580,14 @@ svg {
   margin: 0 30px;
   padding: 75px 8.33333333%;
   font-size: 16px;
-  line-height: 1;
+  line-height: 1.5;
   color: #d62e33;
 }
 .footer a {
   cursor: pointer;
   color: #d62e33;
   margin-right: 2em;
+  white-space: nowrap;
 }
 @media screen and (max-width: 767px) {
   .footer a {
@@ -842,6 +900,7 @@ html.no-cssvhunit .hero .line.bottom {
 .section.about ul li p {
   font-size: 22px;
   line-height: 1.4;
+  margin-bottom: 0.5em;
 }
 @media screen and (max-width: 767px) {
   .section.about ul li p {
@@ -893,6 +952,22 @@ html.no-cssvhunit .hero .line.bottom {
   width: 1px;
   border-left: 1px dashed #815e57;
 }
+.section.howitworks ul:before,
+.section.howitworks ul:after {
+  content: '';
+  display: table;
+}
+.section.howitworks ul:after {
+  clear: both;
+}
+.section.howitworks ul:before,
+.section.howitworks ul:after {
+  content: '';
+  display: table;
+}
+.section.howitworks ul:after {
+  clear: both;
+}
 .section.howitworks ul li {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -943,4 +1018,7 @@ html.no-cssvhunit .hero .line.bottom {
 }
 .section.howitworks ul li p a:hover {
   color: #d62e33;
+}
+.section.howitworks .bigbutton-holder {
+  margin-top: 90px;
 }

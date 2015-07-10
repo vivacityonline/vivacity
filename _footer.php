@@ -8,7 +8,12 @@
 
                     <div class='footer-links'>
                         <a data-scrollto='.hero'>Home</a>
-                        <a>Contact</a>
+                        <a href="http://purchase.delivermevivacity.com">Pricing</a>
+                        <a href="mailto:corporate@delivermevivacity.com">Vivacity at the Office!</a>
+                        <a href="mailto:info@delivermevivacity.com">Press</a>
+                        <a href="mailto:info@delivermevivacity.com">Contact</a>
+<i style="color:gray">Cheers to your Health!™</i>
+
                     </div>
                         
                 </div>

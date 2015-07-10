@@ -156,6 +156,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/static\/images\/ogicon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 399928,
+		"inputAbbreviatedPath": "\/static\/images\/ogicon.png",
+		"outputAbbreviatedPath": "\/static\/images\/ogicon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/static\/images\/src\/m6rT4MYFQ7CT8j9m2AEC_JakeGivens_Sunset_in_the_park.JPG": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -4189,7 +4200,7 @@
 		},
 	"\/static\/styles\/main.css": {
 		"fileType": 16,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/static\/styles\/main.css",
 		"outputAbbreviatedPath": "No Output Path",
@@ -4205,9 +4216,9 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/static\/styles\/main.less",
-		"outputAbbreviatedPath": "\/static\/css\/main.css",
+		"outputAbbreviatedPath": "\/static\/styles\/main.css",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 0,
 		"relativeURLS": 0,
 		"shouldRunAutoprefixer": 0,

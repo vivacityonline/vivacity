@@ -7,19 +7,20 @@
         <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
         <meta name='msapplication-tap-highlight' content='no'>
 
-        <title>Vivacity</title>
+        <title>Vivacity // Morning delivery nutrition blends. Daily.</title>
 
-        <meta name='description' content='Healthy delivery breakfast. Daily. Vivacity is tailored to your body type, dietary needs, and lifestyle.' />
-        <meta property='og:description' content='Healthy delivery breakfast. Daily. Vivacity is tailored to your body type, dietary needs, and lifestyle.' />
+        <meta name='description' content='Healthy delivery breakfast to your office daily. Vivacity is a subscription-based service that delivers morning nutrition blends created by Certified Health Coaches to your office. Stay productive, focused, and well nourished to start your day.' />
+        <meta property='og:description' content='Healthy delivery breakfast to your office daily. Vivacity is a subscription-based service that delivers morning nutrition blends created by Certified Health Coaches to your office. Stay productive, focused, and well nourished to start your day.' />
         
         <meta property='og:site_name' content='Vivacity'/>
         <meta property='og:type' content='website'/>
         <meta property='og:locale' content='en_US' />
         <meta property='og:image' content='/static/images/ogicon.png' />
 
-        <meta name='keywords' content='vivacity, smoothies, smoothie, delivery, office, breakfast, healthy, meal, new york, nyc, new york city, manhattan, brooklyn' />
+        <meta name='keywords' content='Delivery breakfast nyc, health breakfast, delivery nutrition, corporate breakfast, company breakfast, healthy office food, healthy breakfast' />
 
-        <script src='//use.typekit.net/alr8opu.js'></script>
+
+        <script src="//use.typekit.net/alr8opu.js"></script>
         <script>try{Typekit.load();}catch(e){}</script>
 
         <link rel='shortcut icon' type='image/png' href='/static/images/favicon.png'>
@@ -45,7 +46,7 @@
                         <li class='smalllogo' data-scrollto='.hero'><?php include 'static/images/svg-logo.html'; ?></li>
                         <li><a data-scrollto='#about'>About</a></li>
                         <li><a data-scrollto='#howitworks'>How It Works</a></li>
-                        <li><a data-scrollto='#signup' class='button'>Sign Up</a></li>
+                        <li><a data-scrollto='#logo' class='button'>Sign Up</a></li>
                     </ul>
                 </div>
                 <script>
