@@ -109,7 +109,7 @@ define([
                     elements.error.addClass('state-hidden');
 
                     $.ajax({
-                        url: 'http://docs.google.com/forms/d/1f0uKBSBJd3vRebIEFtvch49WsKKOW4pJUutjRSyjrgE/formResponse',
+                        url: 'https://docs.google.com/forms/d/1f0uKBSBJd3vRebIEFtvch49WsKKOW4pJUutjRSyjrgE/formResponse',
                         data: {
                             'entry.756960863':  elements.name.val(),
                             'entry.998837708':  elements.email.val(),
