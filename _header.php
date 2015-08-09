@@ -46,7 +46,7 @@
                         <li class='smalllogo' data-scrollto='.hero'><?php include 'static/images/svg-logo.html'; ?></li>
                         <li><a data-scrollto='#about'>About</a></li>
                         <li><a data-scrollto='#howitworks'>How It Works</a></li>
-                        <li><a data-scrollto='#logo' class='button'>Sign Up</a></li>
+                        <li><a data-scrollto='#logo' class='button'>Learn More</a></li>
                     </ul>
                 </div>
                 <script>

@@ -751,6 +751,13 @@ html.no-cssvhunit .hero .logo {
 .hero .signup .signup-error.state-hidden {
   opacity: 0;
 }
+@media screen and (max-width: 1015px) and (min-width: 768px) {
+  .hero .signup input.signup-submit {
+    margin: 10px auto 0;
+    width: auto;
+    display: block;
+  }
+}
 @media screen and (max-width: 767px) {
   .hero .signup input.signup-name,
   .hero .signup input.signup-email,

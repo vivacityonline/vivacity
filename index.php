@@ -24,7 +24,7 @@ include '_header.php';
                     <input id='signup-name' class='signup-name' type='text' value='I’m inspired! My name is&hellip;' />
                     <input id='signup-email' class='signup-email' type='email' value='Email' />
                     <input id='signup-zip' class='signup-zip' type='text' value='Zip' />
-                    <input id='signup-submit' class='signup-submit' type='submit' value='Sign up' />
+                    <input id='signup-submit' class='signup-submit' type='submit' value='Learn more' />
                     <span id='signup-error' class='signup-error state-hidden'>Error message here</span>
                 </div>
                 <div id='stage-success' class='post-submit-msg' style='display:none'>
@@ -143,7 +143,7 @@ include '_header.php';
     </ul>
 
     <div class='bigbutton-holder'>
-        <a data-scrollto='#logo' class='bigbutton'>Sign Up Today!</a>
+        <a data-scrollto='#logo' class='bigbutton'>Learn More!</a>
     </div>
 
 </div>
