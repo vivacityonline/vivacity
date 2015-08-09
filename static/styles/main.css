@@ -635,13 +635,6 @@ svg {
 }
 .hero {
   min-height: 130vh;
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -ms-background-size: cover;
-  background-size: cover;
   position: relative;
 }
 @media screen and (max-width: 767px) {
@@ -651,6 +644,20 @@ svg {
 }
 html.no-cssvhunit .hero {
   min-height: 625px;
+}
+.hero .hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  background-size: cover;
 }
 .hero .hero-content {
   height: 100vh;

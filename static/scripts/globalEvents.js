@@ -2,12 +2,16 @@ define([
     'jquery',
     'globalElements',
     'functionUtil',
-    'responsiveUtil'
+    'responsiveUtil',
+    'jquery-mousewheel',
+    'rafpolyfill'
 ], function(
     $,
     globalElements,
     functionUtil,
-    responsiveUtil) {
+    responsiveUtil,
+    __mousewheel,
+    __rafpolyfill) {
     'use strict';
 
     return new function() {
@@ -16,12 +20,21 @@ define([
 
         var internal = {
             name: 'GlobalEvents',
-            lastViewportWidth: globalElements.win.width()
+            lastViewportWidth: globalElements.win.width(),
+
+            scroll_top: 0,
+            raf_is_ticking: false,
+            is_wheeling: false,
+            is_wheeling_timeout: null
         };
 
         var fn = {
             init: function() {
+                // set initial scroll top
+                internal.scroll_top = (window.pageYOffset ? window.pageYOffset : globalElements.doc.scrollTop());
+
                 globalElements.win.on('resize', handlers.resize);
+                globalElements.doc.on('mousewheel', handlers.mousewheel);
                 globalElements.doc.on('scroll', handlers.scroll);
             },
 
@@ -47,6 +60,28 @@ define([
             },
             offScroll: function(handler) {
                 return fn.off(eventTypes.SCROLL, handler);
+            },
+
+            _scroll_or_mousewheel_event: function(){
+                if(!internal.raf_is_ticking) {
+                    requestAnimationFrame(fn._trigger_raf_scroll_event);
+                }
+                internal.raf_is_ticking = true;
+            },
+            _trigger_raf_scroll_event: function(){
+                internal.raf_is_ticking = false;
+
+                var native_y_offset = window.pageYOffset;
+
+                internal.scroll_top = (native_y_offset ? native_y_offset : globalElements.doc.scrollTop());
+
+                fn.trigger(eventTypes.SCROLL, {
+                    scroll_top: internal.scroll_top
+                });
+            },
+
+            get_current_scroll_pos: function(){
+                return internal.scroll_top;
             }
         };
 
@@ -80,16 +115,26 @@ define([
 
                 internal.lastViewportWidth = width;
             }, 100),
+            
+            mousewheel: function(){
+                if (!internal.is_wheeling) {
+                    internal.is_wheeling = true;
+                }
+                clearTimeout(internal.is_wheeling_timeout);
+                internal.is_wheeling_timeout = setTimeout(function(){
+                    internal.is_wheeling = false;
+                }, 100);
 
+                fn._scroll_or_mousewheel_event();
+
+                //console.log('wheeling');
+            },
             scroll: function(){
-                var native_y_offset, scroll_top;
+                if (!internal.is_wheeling) {
+                    fn._scroll_or_mousewheel_event();
 
-                native_y_offset = window.pageYOffset;
-                scroll_top = (native_y_offset ? native_y_offset : globalElements.doc.scrollTop());
-
-                fn.trigger(eventTypes.SCROLL, {
-                    scroll_top: scroll_top
-                });
+                    //console.log('scrolling');
+                }
             }
         };
 
@@ -107,6 +152,8 @@ define([
 
         self.onScroll = fn.onScroll;
         self.offScroll = fn.offScroll;
+
+        self.getScrollPos = fn.get_current_scroll_pos;
 
         self.eventTypes = eventTypes;
 

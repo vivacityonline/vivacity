@@ -8,6 +8,7 @@ require.config({
 
     paths: {
         'jquery': '../lib/jquery/dist/jquery.min',
+        'jquery-mousewheel': '../lib/jquery-mousewheel/jquery.mousewheel.min',
         'easing': '../lib/jquery.easing/js/jquery.easing.min',
         'Modernizr': '../lib/modernizr/modernizr',
         'Isotope': '../lib/isotope/dist/isotope.pkgd.min',
@@ -17,6 +18,9 @@ require.config({
     },
 
     shim: {
+        'jquery-mousewheel': {
+            deps: ['jquery']
+        },
         'easing': {
             deps: ['jquery'],
             exports: 'jQuery.easing'

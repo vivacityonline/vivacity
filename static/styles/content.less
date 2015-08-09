@@ -30,7 +30,6 @@
     @_hero_height_novhunit: 550px;
 
     min-height: 100vh + @_slant_height;
-    .full-bg(bottom right, cover);
     position: relative;
     
     @media @phone {
@@ -39,6 +38,12 @@
 
     html.no-cssvhunit & {
         min-height: @_hero_height_novhunit + @_slant_height_novhunit;
+    }
+
+    .hero-bg {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        .full-bg(bottom right, cover);
     }
 
     .hero-content {

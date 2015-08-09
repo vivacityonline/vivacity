@@ -4,7 +4,10 @@ include '_header.php';
 ?>
 
 
-<div class='hero' style='background-image: url(/static/images/bg.jpg)'>
+<div class='hero' id='hero'>
+
+    <div class='hero-bg' id='hero-bg' style='background-image: url(/static/images/bg.jpg)'>
+    </div>
 
     <div class='hero-content'>
         <div class='hero-content-membrane'>
@@ -44,8 +47,6 @@ include '_header.php';
                 });
             </script>
 
-
-
         </div>
     </div>
 
@@ -60,6 +61,15 @@ include '_header.php';
     <span class='line bottom'></span>
 
 </div>
+<script>
+    scripts.push(function(core) {
+        require(['Hero'], function(Hero) {
+            core.instances.hero = new Hero({
+                selector: '#hero'
+            });
+        });
+    });
+</script>
 
 
 <div class='section about' id='about'>
