@@ -17,7 +17,7 @@ include '_header.php';
                 <?php include 'static/images/svg-logo.html'; ?>
             </div>
 
-            <span class='tagline'>Morning delivery nutrition blends. Daily.</span>
+            <span class='tagline'>Nutritious Breakfast Blends Delivered in NYC</span>
 
             <form id='signup' class='signup'>
                 <div id='stage-form' class='pre-submit-form'>
