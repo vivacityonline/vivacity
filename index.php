@@ -4,7 +4,7 @@ include '_header.php';
 ?>
 
 
-<div class='hero' id='hero'>
+<div class='hero' id='hero' data-section='hero'>
 
     <div class='hero-bg' id='hero-bg' style='background-image: url(/static/images/bg.jpg)'>
     </div>
@@ -72,7 +72,7 @@ include '_header.php';
 </script>
 
 
-<div class='section about' id='about'>
+<div class='section about' id='about' data-section='about'>
 
 
 
@@ -108,7 +108,7 @@ include '_header.php';
 </div>
 
 
-<div class='section howitworks' id='howitworks'>
+<div class='section howitworks' id='howitworks' data-section='howitworks'>
 
     <span class='line horizontal'></span>
     <span class='line vertical'></span>

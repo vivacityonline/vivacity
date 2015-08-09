@@ -44,8 +44,8 @@
                 <div id='nav' class='header'>
                     <ul>
                         <li class='smalllogo' data-scrollto='.hero'><?php include 'static/images/svg-logo.html'; ?></li>
-                        <li><a data-scrollto='#about'>About</a></li>
-                        <li><a data-scrollto='#howitworks'>How It Works</a></li>
+                        <li><a section='about' data-scrollto='#about'>About</a></li>
+                        <li><a section='howitworks' data-scrollto='#howitworks'>How It Works</a></li>
                         <li><a data-scrollto='#logo' class='button'>Learn More</a></li>
                     </ul>
                 </div>

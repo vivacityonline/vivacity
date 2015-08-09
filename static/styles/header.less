@@ -84,6 +84,17 @@
                     color: @color_primary_med;
                 }
 
+                .section-about & {
+                    &[section=about] {
+                        color: @color_accent;
+                    }
+                }
+                 .section-howitworks & {
+                    &[section=howitworks] {
+                        color: @color_accent;
+                    }
+                }
+
                 &:hover {
                     color: @color_accent;
                 }
@@ -98,12 +109,12 @@
                 }
 
                 .state-sticky& {
-                    color: @color_accent;
-                    border-color: @color_accent;
+                    color: @color_primary_med;
+                    border-color: @color_primary_med;
 
                     &:hover {
-                        color: @color_accent_dark;
-                        border-color: @color_accent_dark;
+                        color: @color_accent;
+                        border-color: @color_accent;
                     }
                 }
             }

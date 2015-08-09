@@ -555,6 +555,12 @@ svg {
 .state-sticky.header ul li a {
   color: #e89e6c;
 }
+.section-about .header ul li a[section=about] {
+  color: #d62e33;
+}
+.section-howitworks .header ul li a[section=howitworks] {
+  color: #d62e33;
+}
 .header ul li a:hover {
   color: #d62e33;
 }
@@ -567,12 +573,12 @@ svg {
   border-color: #d62e33;
 }
 .state-sticky.header ul li a.button {
-  color: #d62e33;
-  border-color: #d62e33;
+  color: #e89e6c;
+  border-color: #e89e6c;
 }
 .state-sticky.header ul li a.button:hover {
-  color: #991e22;
-  border-color: #991e22;
+  color: #d62e33;
+  border-color: #d62e33;
 }
 .footer {
   border-top: 1px solid #fff7e9;
