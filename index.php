@@ -146,6 +146,50 @@ include '_header.php';
         <a data-scrollto='#logo' class='bigbutton'>Learn More!</a>
     </div>
 
+    <div class='carousel testimonialcarousel' id='testimonialcarousel'>
+        <div class='carousel-track'>
+            <div class='carousel-item'>
+                <div class='testimonial'>
+                    <span class='carousel-prev'></span>
+                    <span class='carousel-next'></span>
+
+                    <span class='testimonial-text'>Vivacity&apos;s smoothies not only taste incredibly dope, but they&apos;re tailored to my specific preferences and Elise is very receptive to feedback, so the daily blends I get have evolved over time based on my own input. Beyond just enjoying the taste, drinking these smoothies have helped me drink less caffeine, helped reduce springtime allergies, and generally made me feel healthier.<span class='caret'></span></span>
+                    <span class='testimonial-meta'><strong>Lev Kanter</strong> <em>Partner and Lead Developer, <a href='http://typecode.com' target='_blank'>Type/Code</a></em></span>
+                </div>
+            </div>
+
+            <div class='carousel-item'>
+                <div class='testimonial'>
+                    <span class='carousel-prev'></span>
+                    <span class='carousel-next'></span>
+
+                    <span class='testimonial-text'>Working in finance means being up early before the market opens and also means very little time to get breakfast. I&apos;ve also been dedicated to getting healthy his past year and you can&apos;t have healthy without breakfast! Luckily Vivacity has solved this problem for me with amazing results. I am obsessed with the smoothies and it&apos;s really nice to be able to customize according to nutritional goals. Plus they have office delivery &mdash; genius!! Thank you Vivacity for helping me maintain health / life / work balance!!<span class='caret'></span></span>
+                    <span class='testimonial-meta'><strong>Audra Benge</strong> <em>Registered Client Service Associate, <a href='http://ubs.com' target='_blank'>UBS Financial Services Inc.</a></em></span>
+                </div>
+            </div>
+
+            <div class='carousel-item'>
+                <div class='testimonial'>
+                    <span class='carousel-prev'></span>
+                    <span class='carousel-next'></span>
+
+                    <span class='testimonial-text'>Vivacity may be the best keystone habit I&apos;ve incorporated into my life.  Knowing an optimal meal replacement is showing up at 6pm everyday (my schedule) as a meal replacement simplifies so many things beyond just dinner.  Worked well for breakfast as well!  Can&apos;t recommend it enough<span class='caret'></span></span>
+                    <span class='testimonial-meta'><strong>Aram Taghavi</strong> <em>Tech Startup Entrepreneur, <a href='http://flowapps.org' target='_blank'>Flow Apps</a></em></span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        scripts.push(function(core) {
+            require(['Carousel'], function(Carousel) {
+                core.instances.testimonialcarousel = new Carousel({
+                    selector: '#testimonialcarousel'
+                });
+            });
+        });
+    </script>
+
 </div>
 
 

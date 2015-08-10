@@ -22,7 +22,6 @@ define([
         var o = $.extend({
             $e: null,
             selector: '',
-            zips: [10002,10013]
         }, options);
 
 

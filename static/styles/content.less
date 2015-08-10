@@ -308,6 +308,7 @@
 .section.howitworks {
     
     padding-top: @section_howitworks_top_pad;
+    padding-bottom: 0;
     background: @color_white;
     .clearfix();
     position: relative;
@@ -393,6 +394,115 @@
 
                     &:hover {
                         color: @color_accent;
+                    }
+                }
+            }
+        }
+    }
+
+    .testimonialcarousel {
+        padding: 120px 0 50px;
+        margin:  100px 0 0 0;
+        margin-left: -1*@gutter;
+        width: 100vw;
+        background: @color_primary_med;
+
+        .carousel-item {
+            padding: @gutter;
+        }
+    }
+    .testimonial {
+        font-size: 20px;
+        line-height: 1.35;
+        position: relative;
+        max-width: 700px;
+        margin: 0 auto 0;
+        text-align: center;
+
+        .testimonial-text, 
+        .testimonial-meta {
+            .border-box();
+            padding: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+
+        .carousel-prev:before {
+            top: 100px;
+            left: -30px;
+            color: @color_yellow;
+        }
+        .carousel-next:before {
+            top: 100px;
+            right: -30px;
+            color: @color_yellow;
+        }
+
+        @media @phone {
+            .carousel-prev:before,
+            .carousel-next:before {
+                position: static;
+                display: inline-block;
+            }
+        }
+
+        .testimonial-text {
+            display: block;
+            background: @color_white;
+            position: relative;
+            color: @color_primary_med;
+
+            .caret {
+                position: absolute;
+                top: 100%;
+                left: 40px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 40px 40px 0 0;
+                border-color: @color_white transparent transparent transparent;
+            }
+
+            &:before,
+            &:after {
+                position: absolute;
+                font-size: 120px;
+                line-height: 1;
+                color: @color_primary_med;
+                .sans-bold;
+            }
+            &:before {
+                content: '\201C';
+                top:  -0.15em;
+                left: -0.09em;
+            }
+            &:after {
+                content: '\201D';
+                bottom: -0.5em;
+                right:  -0.05em;
+            }
+        }
+        .testimonial-meta {
+            display: block;
+            margin-top: 0.5em;
+            padding-bottom: 0;
+            color: @color_white;
+
+            strong, em {
+                display: block;
+            }
+            em {
+                font-size: 75%;
+                opacity: 0.7;
+
+                a {
+                    color: inherit;
+                    text-decoration: underline;
+
+                    &:hiver {
+                        color: @color_primary_dark;
                     }
                 }
             }

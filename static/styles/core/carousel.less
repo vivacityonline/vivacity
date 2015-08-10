@@ -1,0 +1,47 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    .clearfix; 
+
+    .carousel-prev,
+    .carousel-next {
+        &:before {
+            position: absolute;
+            top: 50%;
+            font-size: 70px;
+            line-height: 1;
+            margin-top: -35px;
+            padding: @gutter/2;
+            color: @color_green;
+        }
+        &:hover:before {
+            color: @color_primary_dark;
+            cursor: pointer;
+        }
+    }
+    .carousel-prev {
+        &:before {
+            content: '\2039';
+            left: @gutter/2;
+        }
+    }
+    .carousel-next {
+        &:before {
+            content: '\203A';
+            right: @gutter/2;
+        }
+    }
+
+    .carousel-track {
+        width: 9999999px;
+        .transition(all, 700ms, 0, cubic-bezier(0.68, -0.55, 0.265, 1.55));
+
+        .carousel-item {
+            .border-box();
+            width: 100vw;
+            position: relative;
+            float: left;
+        }
+    }
+}
